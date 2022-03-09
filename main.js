@@ -64,13 +64,46 @@
 // }
 //N8
 // function getLiCount(){
-//     let lis = document.getElementsByTagName('li');
+//     const lis = document.getElementsByTagName('li');
 //
-//     for (let li of lis) {
-//
+//     for (const li of lis) {
 //         let descendantsCount = li.getElementsByTagName('li').length;
 //         if (!descendantsCount) continue;
 //
 //         li.firstChild.data += ' [' + descendantsCount + ']';
 //     }
 // }
+
+//N9
+// function updateTime(){
+//     const clock = document.getElementById("clock")
+//     const date = new Date()
+//
+//     const hours = date.getHours()
+//     clock.firstElementChild.innerHTML = hours.toString()
+//
+//     const minutes = date.getMinutes()
+//     clock.children[1].innerHTML = minutes.toString()
+//
+//     const seconds = date.getSeconds()
+//     clock.lastElementChild.innerHTML = seconds.toString()
+// }
+//
+// function startClock(){
+//     setInterval(updateTime, 1000)
+// }
+// startClock()
+
+// N10
+// function insertLi(){
+//     const li = document.getElementById("one")
+//     const newLi1 = document.createElement("li")
+//     newLi1.innerText = "2"
+//     li.after(newLi1)
+//
+//     const newLi2 = document.createElement("li")
+//     newLi2.innerText = "3"
+//     newLi1.after(newLi2)
+//
+// }
+// insertLi()
