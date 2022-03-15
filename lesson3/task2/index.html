@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #view{
+            width: 100px;
+            height: 70px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="view">Текст</div>
+
+<script>
+    const view = document.getElementById('view');
+
+    view.onclick = function() {
+        const textarea = document.createElement("textarea")
+        textarea.value = view.innerHTML
+        view.replaceWith(textarea);
+        textarea.focus();
+
+        textarea.onkeydown = function (event){
+            if(event.key === "Enter") this.blur()
+        }
+        textarea.onblur = function () {
+            view.innerHTML = textarea.value
+            textarea.replaceWith(view)
+        }
+
+
+
+    };
+
+
+</script>
+
+</body>
+</html>
